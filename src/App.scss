@@ -1,3 +1,8 @@
+$theme-colors: (
+  "primary": #e50085,
+  "danger": #ff4136,
+);
+
 @import "bootstrap-scss";
 .app {
   position: relative;
@@ -92,6 +97,7 @@
   display: flex;
   align-items: center;
   button {
-    padding: 10px 50px;
+    padding: 10px 80px;
+    font-weight: 700;
   }
 }
