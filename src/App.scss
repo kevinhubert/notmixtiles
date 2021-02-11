@@ -1,0 +1,97 @@
+@import "bootstrap-scss";
+.app {
+  position: relative;
+}
+.app-title {
+  text-align: center;
+  height: 100px;
+  line-height: 100px;
+  color: #ffffff;
+  background-color: #18506f;
+  margin-bottom: 30px;
+  border-bottom: 10px solid #20b4e7;
+  position: fixed;
+  width: 100%;
+}
+.tiles-container {
+  max-width: 1200px;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  margin: 130px auto 0 auto;
+  .row {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: flex-start;
+  }
+  .tile {
+    margin-bottom: 30px;
+    box-shadow: 1px 2px 14px -2px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    img {
+      width: 100%;
+      border-right: 5px solid #909090;
+      border-bottom: 5px solid #909090;
+    }
+    &:hover {
+      .remove {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    .remove {
+      background-color: rgba(255, 255, 255, 0.65);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition-duration: 300ms;
+      &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid black;
+        padding: 15px;
+      }
+    }
+  }
+}
+.tile-upload {
+  height: 260px;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  box-shadow: 1px 2px 7px -2px;
+}
+.advance {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  button {
+    padding: 10px 50px;
+  }
+}
